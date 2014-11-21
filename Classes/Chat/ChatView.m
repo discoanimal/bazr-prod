@@ -108,7 +108,8 @@
 		NSString *text = snapshot.value[@"text"];
 
 		NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-		[formatter setDateFormat: @"yyyy-MM-dd HH:mm:ss zzz"];
+		[formatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'zzz'"];
+		[formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 		NSDate *date = [formatter dateFromString:dateStr];
 
 		JSQMessage *message = [[JSQMessage alloc] initWithSenderId:userId senderDisplayName:name date:date text:text];
@@ -139,16 +140,16 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-	[formatter setDateFormat: @"yyyy-MM-dd HH:mm:ss zzz"];
+	[formatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'zzz'"];
+	[formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 	NSString *dateStr = [formatter stringFromDate:date];
-	
+
 	[[self.firebase childByAutoId] setValue:@{@"text":text, @"userId":senderId, @"date":dateStr, @"name":senderDisplayName}];
-	
-	[JSQSystemSoundPlayer jsq_playMessageSentSound];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	SendPushNotification(roomId, text);
 	UpdateMessageCounter(roomId, text);
 	//---------------------------------------------------------------------------------------------------------------------------------------------
+	[JSQSystemSoundPlayer jsq_playMessageSentSound];
 	[self finishSendingMessage];
 }
 
