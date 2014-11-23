@@ -6,7 +6,7 @@ This is a full native iPhone app to create realtime, text based group or private
 
 ![Chat](http://relatedcode.com/github/chat01.png)
 .
-![Chat](http://relatedcode.com/github/chat04.png)
+![Chat](http://relatedcode.com/github/chat02.png)
 .
 ![Chat](http://relatedcode.com/github/chat03.png)
 
