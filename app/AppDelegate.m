@@ -41,7 +41,7 @@
 	NavigationController *navController2 = [[NavigationController alloc] initWithRootViewController:self.privateView];
 	NavigationController *navController3 = [[NavigationController alloc] initWithRootViewController:self.messagesView];
 	NavigationController *navController4 = [[NavigationController alloc] initWithRootViewController:self.profileView];
-
+    
 	self.tabBarController = [[UITabBarController alloc] init];
 	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, navController3, navController4, nil];
 	self.tabBarController.tabBar.translucent = NO;

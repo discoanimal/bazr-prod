@@ -37,9 +37,9 @@
 	[super viewDidLoad];
 	self.title = @"Posts";
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self
-																			 action:@selector(actionNew)];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(actionPost)];
+//	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self
+//																			 action:@selector(actionNew)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(actionPost)];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	self.tableView.separatorInset = UIEdgeInsetsZero;
 	//---------------------------------------------------------------------------------------------------------------------------------------------
@@ -75,10 +75,15 @@
 - (void)actionPost
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title for new Post" message:nil delegate:self
+    UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"New Post" message:nil delegate:self
                                           cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    [alert show];
+    alert2.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
+    
+    [[alert2 textFieldAtIndex:1] setSecureTextEntry:NO];
+    [[alert2 textFieldAtIndex:0] setPlaceholder:@"Title"];
+    [[alert2 textFieldAtIndex:1] setPlaceholder:@"Description"];
+    
+    [alert2 show];
 }
 
 
@@ -91,10 +96,12 @@
 	if (buttonIndex != alertView.cancelButtonIndex)
 	{
 		UITextField *textField = [alertView textFieldAtIndex:0];
+        UITextField *textField2 = [alertView textFieldAtIndex:1];
 		if ([textField.text isEqualToString:@""] == NO)
 		{
 			PFObject *object = [PFObject objectWithClassName:PF_CHATROOMS_CLASS_NAME];
 			object[PF_CHATROOMS_NAME] = textField.text;
+            object[PF_CHATROOMS_DESCRIPTION] = textField2.text;
 			[object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
 			{
 				if (error == nil)
@@ -154,6 +161,7 @@
 
 	PFObject *chatroom = chatrooms[indexPath.row];
 	cell.textLabel.text = chatroom[PF_CHATROOMS_NAME];
+    cell.detailTextLabel.text = chatroom[PF_CHATROOMS_DESCRIPTION];
 
 	return cell;
 }

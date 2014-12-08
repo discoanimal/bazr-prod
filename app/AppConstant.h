@@ -24,6 +24,7 @@
 
 #define		PF_CHATROOMS_CLASS_NAME				@"ChatRooms"			//	Class name
 #define		PF_CHATROOMS_NAME					@"name"					//	String
+#define		PF_CHATROOMS_DESCRIPTION			@"chatDescription"		//	String
 
 #define		PF_MESSAGES_CLASS_NAME				@"Messages2"			//	Class name
 #define		PF_MESSAGES_USER					@"user"					//	Pointer to User Class

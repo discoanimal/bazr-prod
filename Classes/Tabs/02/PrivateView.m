@@ -42,8 +42,8 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self)
 	{
-		[self.tabBarItem setImage:[UIImage imageNamed:@"tab_private"]];
-		self.tabBarItem.title = @"Private";
+		[self.tabBarItem setImage:[UIImage imageNamed:@"tab_group"]];
+		self.tabBarItem.title = @"Users";
 	}
 	return self;
 }
@@ -53,7 +53,7 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[super viewDidLoad];
-	self.title = @"Private";
+	self.title = @"Users";
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	self.tableView.tableHeaderView = viewHeader;
 	self.tableView.separatorInset = UIEdgeInsetsZero;
