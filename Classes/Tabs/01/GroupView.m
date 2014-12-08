@@ -1,21 +1,9 @@
-//
-// Copyright (c) 2014 Related Code - http://relatedcode.com
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
 
 #import <Parse/Parse.h>
 #import "ProgressHUD.h"
-
 #import "AppConstant.h"
 #import "messages.h"
 #import "utilities.h"
-
 #import "GroupView.h"
 #import "ChatView.h"
 
@@ -37,7 +25,7 @@
 	if (self)
 	{
 		[self.tabBarItem setImage:[UIImage imageNamed:@"tab_group"]];
-		self.tabBarItem.title = @"Group";
+		self.tabBarItem.title = @"Posts";
 	}
 	return self;
 }
@@ -47,10 +35,11 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[super viewDidLoad];
-	self.title = @"Group";
+	self.title = @"Posts";
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self
 																			 action:@selector(actionNew)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(actionPost)];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	self.tableView.separatorInset = UIEdgeInsetsZero;
 	//---------------------------------------------------------------------------------------------------------------------------------------------
@@ -76,11 +65,22 @@
 - (void)actionNew
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Please enter a name for your group" message:nil delegate:self
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Please enter a title for your post" message:nil delegate:self
 										  cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
 	alert.alertViewStyle = UIAlertViewStylePlainTextInput;
 	[alert show];
 }
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+- (void)actionPost
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title for new Post" message:nil delegate:self
+                                          cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+}
+
 
 #pragma mark - UIAlertViewDelegate
 

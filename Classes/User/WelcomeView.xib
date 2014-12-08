@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeView">
@@ -15,13 +15,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-uy-RRG">
-                    <rect key="frame" x="20" y="380" width="280" height="50"/>
+                    <rect key="frame" x="20" y="398" width="280" height="44"/>
                     <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="EDQ-5v-jX1"/>
+                        <constraint firstAttribute="height" constant="44" id="EDQ-5v-jX1"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                    <state key="normal" title="FACEBOOK LOGIN">
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                    <state key="normal" title="FACEBOOK">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
@@ -35,13 +35,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rka-Wf-v14">
-                    <rect key="frame" x="20" y="440" width="280" height="50"/>
-                    <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="20" y="452" width="280" height="44"/>
+                    <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="0.91000000000000003" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="6ID-e8-ESG"/>
+                        <constraint firstAttribute="height" constant="44" id="6ID-e8-ESG"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                    <state key="normal" title="REGISTER">
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                    <state key="normal" title="SIGN UP">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
@@ -55,10 +55,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wf-8f-ELf">
-                    <rect key="frame" x="20" y="500" width="280" height="50"/>
-                    <color key="backgroundColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                    <state key="normal" title="LOGIN">
+                    <rect key="frame" x="20" y="506" width="280" height="44"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ByG-iR-leH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                    <state key="normal" title="SIGN IN">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
@@ -78,7 +81,7 @@
                 <constraint firstItem="Rka-Wf-v14" firstAttribute="leading" secondItem="oy6-uy-RRG" secondAttribute="leading" id="IC2-ad-bVN"/>
                 <constraint firstItem="oy6-uy-RRG" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="N5T-4Y-mJ1"/>
                 <constraint firstItem="Rka-Wf-v14" firstAttribute="trailing" secondItem="7Wf-8f-ELf" secondAttribute="trailing" id="QX8-9D-Qae"/>
-                <constraint firstAttribute="bottom" secondItem="oy6-uy-RRG" secondAttribute="bottom" constant="138" id="WHz-GH-l4R"/>
+                <constraint firstAttribute="bottom" secondItem="oy6-uy-RRG" secondAttribute="bottom" constant="126" id="WHz-GH-l4R"/>
                 <constraint firstItem="7Wf-8f-ELf" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="gHS-HE-yy4"/>
                 <constraint firstItem="Rka-Wf-v14" firstAttribute="leading" secondItem="7Wf-8f-ELf" secondAttribute="leading" id="gzu-CM-RpA"/>
                 <constraint firstItem="Rka-Wf-v14" firstAttribute="trailing" secondItem="oy6-uy-RRG" secondAttribute="trailing" id="hHt-6b-iKf"/>

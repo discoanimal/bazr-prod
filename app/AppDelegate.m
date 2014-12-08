@@ -1,20 +1,8 @@
-//
-// Copyright (c) 2014 Related Code - http://relatedcode.com
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
 
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
-
 #import "AppConstant.h"
 #import "utilities.h"
-
 #import "AppDelegate.h"
 #import "GroupView.h"
 #import "PrivateView.h"
@@ -28,7 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[Parse setApplicationId:@"sRtJbiHUImOPq2KPHPda0QXqSXsAWokDNBYN4GfL" clientKey:@"iGS37ZA4FzOmeizqRVjMvZXj6RYdBKlm6aODZMNM"];
+	[Parse setApplicationId:@"xNdQFsbz5yM3CGrg17zZJBIfZAqzX60Jo46qAGb9" clientKey:@"5ilkTjGLHPbovOauelVw0SRuUvyx5Gumlw0grmFU"];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	[PFFacebookUtils initializeFacebook];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
