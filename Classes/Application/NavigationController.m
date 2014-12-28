@@ -16,6 +16,7 @@
 	self.navigationBar.tintColor = [UIColor whiteColor];
 	self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
 	self.navigationBar.translucent = NO;
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavBar2Bazr"] forBarMetrics:UIBarMetricsDefault];
 }
 
 @end

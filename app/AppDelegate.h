@@ -4,6 +4,10 @@
 #import "PrivateView.h"
 #import "MessagesView.h"
 #import "ProfileView.h"
+#import "FontAwesomeKit/FAKFontAwesome.h"
+#import "FontAwesomeKit/FAKFoundationIcons.h"
+#import "FontAwesomeKit/FAKZocial.h"
+#import "FontAwesomeKit/FAKIonIcons.h"
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

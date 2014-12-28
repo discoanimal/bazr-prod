@@ -108,6 +108,31 @@
 		29EB243619E9297900D7AA97 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EB243419E9297900D7AA97 /* Parse.framework */; };
 		29EB243719E9297900D7AA97 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EB243519E9297900D7AA97 /* ParseFacebookUtils.framework */; };
 		29EB255119E92B3600D7AA97 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EB255019E92B3600D7AA97 /* FacebookSDK.framework */; };
+		A05043361A42D8FB00AEC3F7 /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = A05043281A42D8FB00AEC3F7 /* FAKFontAwesome.m */; };
+		A05043371A42D8FB00AEC3F7 /* FAKFoundationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = A050432A1A42D8FB00AEC3F7 /* FAKFoundationIcons.m */; };
+		A05043381A42D8FB00AEC3F7 /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = A050432C1A42D8FB00AEC3F7 /* FAKIcon.m */; };
+		A05043391A42D8FB00AEC3F7 /* FAKIonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = A050432E1A42D8FB00AEC3F7 /* FAKIonIcons.m */; };
+		A050433A1A42D8FB00AEC3F7 /* FAKZocial.m in Sources */ = {isa = PBXBuildFile; fileRef = A05043301A42D8FB00AEC3F7 /* FAKZocial.m */; };
+		A050433B1A42D8FB00AEC3F7 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = A05043311A42D8FB00AEC3F7 /* FontAwesome.otf */; };
+		A050433C1A42D8FB00AEC3F7 /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A05043331A42D8FB00AEC3F7 /* foundation-icons.ttf */; };
+		A050433D1A42D8FB00AEC3F7 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A05043341A42D8FB00AEC3F7 /* ionicons.ttf */; };
+		A050433E1A42D8FB00AEC3F7 /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A05043351A42D8FB00AEC3F7 /* zocial-regular-webfont.ttf */; };
+		A05043401A42DB0A00AEC3F7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A050433F1A42DB0A00AEC3F7 /* CoreText.framework */; };
+		A05043421A42ECDE00AEC3F7 /* NavBarBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A05043411A42ECDE00AEC3F7 /* NavBarBG.png */; };
+		A05043441A42F5E900AEC3F7 /* bazrLogoForAppVector.png in Resources */ = {isa = PBXBuildFile; fileRef = A05043431A42F5E900AEC3F7 /* bazrLogoForAppVector.png */; };
+		A05043461A4314EC00AEC3F7 /* NavBar2Bazr.png in Resources */ = {isa = PBXBuildFile; fileRef = A05043451A4314EC00AEC3F7 /* NavBar2Bazr.png */; };
+		A089043C1A43B23A00C5A88D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A089043B1A43B23A00C5A88D /* Foundation.framework */; };
+		A089043E1A43B24500C5A88D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A089043D1A43B24500C5A88D /* CoreGraphics.framework */; };
+		A08904401A43B25500C5A88D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A089043F1A43B25500C5A88D /* UIKit.framework */; };
+		A08904421A43B25D00C5A88D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08904411A43B25D00C5A88D /* MapKit.framework */; };
+		A08904481A43B43F00C5A88D /* CSStickyHeaderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A08904451A43B43F00C5A88D /* CSStickyHeaderFlowLayout.m */; };
+		A08904491A43B43F00C5A88D /* CSStickyHeaderFlowLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A08904471A43B43F00C5A88D /* CSStickyHeaderFlowLayoutAttributes.m */; };
+		A089044C1A43B4F800C5A88D /* CSParallaxHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A089044B1A43B4F800C5A88D /* CSParallaxHeader.xib */; };
+		A089044F1A43B58E00C5A88D /* CSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A089044D1A43B58E00C5A88D /* CSCell.m */; };
+		A08904511A448E6E00C5A88D /* GroupView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08904501A448E6E00C5A88D /* GroupView.storyboard */; };
+		A0970DE11A482740001FA1C3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0970DE01A482740001FA1C3 /* CoreLocation.framework */; };
+		A0970DE31A48274C001FA1C3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0970DE21A48274C001FA1C3 /* MobileCoreServices.framework */; };
+		A0970DE51A48275C001FA1C3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0970DE41A48275C001FA1C3 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -307,6 +332,43 @@
 		29EB243519E9297900D7AA97 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		29EB254F19E92ACD00D7AA97 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
 		29EB255019E92B3600D7AA97 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		A05043271A42D8FB00AEC3F7 /* FAKFontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKFontAwesome.h; sourceTree = "<group>"; };
+		A05043281A42D8FB00AEC3F7 /* FAKFontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKFontAwesome.m; sourceTree = "<group>"; };
+		A05043291A42D8FB00AEC3F7 /* FAKFoundationIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKFoundationIcons.h; sourceTree = "<group>"; };
+		A050432A1A42D8FB00AEC3F7 /* FAKFoundationIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKFoundationIcons.m; sourceTree = "<group>"; };
+		A050432B1A42D8FB00AEC3F7 /* FAKIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKIcon.h; sourceTree = "<group>"; };
+		A050432C1A42D8FB00AEC3F7 /* FAKIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKIcon.m; sourceTree = "<group>"; };
+		A050432D1A42D8FB00AEC3F7 /* FAKIonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKIonIcons.h; sourceTree = "<group>"; };
+		A050432E1A42D8FB00AEC3F7 /* FAKIonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKIonIcons.m; sourceTree = "<group>"; };
+		A050432F1A42D8FB00AEC3F7 /* FAKZocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKZocial.h; sourceTree = "<group>"; };
+		A05043301A42D8FB00AEC3F7 /* FAKZocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKZocial.m; sourceTree = "<group>"; };
+		A05043311A42D8FB00AEC3F7 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../Classes/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		A05043321A42D8FB00AEC3F7 /* FontAwesomeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesomeKit.h; sourceTree = "<group>"; };
+		A05043331A42D8FB00AEC3F7 /* foundation-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "foundation-icons.ttf"; path = "../Classes/FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
+		A05043341A42D8FB00AEC3F7 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = ../Classes/FontAwesomeKit/ionicons.ttf; sourceTree = "<group>"; };
+		A05043351A42D8FB00AEC3F7 /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zocial-regular-webfont.ttf"; path = "../Classes/FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
+		A050433F1A42DB0A00AEC3F7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		A05043411A42ECDE00AEC3F7 /* NavBarBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarBG.png; sourceTree = "<group>"; };
+		A05043431A42F5E900AEC3F7 /* bazrLogoForAppVector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bazrLogoForAppVector.png; sourceTree = "<group>"; };
+		A05043451A4314EC00AEC3F7 /* NavBar2Bazr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBar2Bazr.png; sourceTree = "<group>"; };
+		A089043B1A43B23A00C5A88D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A089043D1A43B24500C5A88D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A089043F1A43B25500C5A88D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A08904411A43B25D00C5A88D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A08904441A43B43F00C5A88D /* CSStickyHeaderFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSStickyHeaderFlowLayout.h; sourceTree = "<group>"; };
+		A08904451A43B43F00C5A88D /* CSStickyHeaderFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSStickyHeaderFlowLayout.m; sourceTree = "<group>"; };
+		A08904461A43B43F00C5A88D /* CSStickyHeaderFlowLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSStickyHeaderFlowLayoutAttributes.h; sourceTree = "<group>"; };
+		A08904471A43B43F00C5A88D /* CSStickyHeaderFlowLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSStickyHeaderFlowLayoutAttributes.m; sourceTree = "<group>"; };
+		A089044B1A43B4F800C5A88D /* CSParallaxHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSParallaxHeader.xib; sourceTree = "<group>"; };
+		A089044D1A43B58E00C5A88D /* CSCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCell.m; sourceTree = "<group>"; };
+		A089044E1A43B58E00C5A88D /* CSCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCell.h; sourceTree = "<group>"; };
+		A08904501A448E6E00C5A88D /* GroupView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupView.storyboard; sourceTree = "<group>"; };
+		A0970DE01A482740001FA1C3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A0970DE21A48274C001FA1C3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A0970DE41A48275C001FA1C3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A3AE017C84F8FC6674B35D00 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C22B48EE2A2A4364804F8264 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD64EC1249EB86E5FC9575A7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +376,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0970DE51A48275C001FA1C3 /* SystemConfiguration.framework in Frameworks */,
+				A0970DE31A48274C001FA1C3 /* MobileCoreServices.framework in Frameworks */,
+				A0970DE11A482740001FA1C3 /* CoreLocation.framework in Frameworks */,
+				A08904421A43B25D00C5A88D /* MapKit.framework in Frameworks */,
+				A08904401A43B25500C5A88D /* UIKit.framework in Frameworks */,
+				A089043E1A43B24500C5A88D /* CoreGraphics.framework in Frameworks */,
+				A089043C1A43B23A00C5A88D /* Foundation.framework in Frameworks */,
+				A05043401A42DB0A00AEC3F7 /* CoreText.framework in Frameworks */,
 				2998B4221A1F7F7900C95A00 /* Social.framework in Frameworks */,
 				2998B4181A1F7F3700C95A00 /* libc++.dylib in Frameworks */,
 				2998B4161A1F7F3000C95A00 /* libicucore.dylib in Frameworks */,
@@ -417,11 +487,14 @@
 		29271A3019F284B1009C308B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A089044A1A43B4E300C5A88D /* Cells */,
+				A08904431A43B43F00C5A88D /* CSStickyHeaderFlowLayout */,
 				29271A3119F284B1009C308B /* Application */,
 				29271A3419F284B1009C308B /* Chat */,
 				29271A3719F284B1009C308B /* Tabs */,
 				29271A4A19F284B1009C308B /* User */,
 				29271A5419F284B1009C308B /* Utilities */,
+				A05043261A42D8FB00AEC3F7 /* FontIcons */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -460,6 +533,7 @@
 			children = (
 				29271A3919F284B1009C308B /* GroupView.h */,
 				29271A3A19F284B1009C308B /* GroupView.m */,
+				A08904501A448E6E00C5A88D /* GroupView.storyboard */,
 			);
 			path = 01;
 			sourceTree = "<group>";
@@ -710,6 +784,13 @@
 		29B8FE7319E92E4500E7A503 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A05043451A4314EC00AEC3F7 /* NavBar2Bazr.png */,
+				A05043431A42F5E900AEC3F7 /* bazrLogoForAppVector.png */,
+				A05043411A42ECDE00AEC3F7 /* NavBarBG.png */,
+				A05043351A42D8FB00AEC3F7 /* zocial-regular-webfont.ttf */,
+				A05043331A42D8FB00AEC3F7 /* foundation-icons.ttf */,
+				A05043341A42D8FB00AEC3F7 /* ionicons.ttf */,
+				A05043311A42D8FB00AEC3F7 /* FontAwesome.otf */,
 				2930F93419E96C73000F7799 /* Images */,
 			);
 			path = Resources;
@@ -724,6 +805,7 @@
 				29EB243319E9297900D7AA97 /* Frameworks */,
 				29EB240719E9292500D7AA97 /* app */,
 				29EB240619E9292500D7AA97 /* Products */,
+				82270D3C6CFDF8CEF9B89465 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -760,6 +842,14 @@
 		29EB243319E9297900D7AA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0970DE41A48275C001FA1C3 /* SystemConfiguration.framework */,
+				A0970DE21A48274C001FA1C3 /* MobileCoreServices.framework */,
+				A0970DE01A482740001FA1C3 /* CoreLocation.framework */,
+				A08904411A43B25D00C5A88D /* MapKit.framework */,
+				A089043F1A43B25500C5A88D /* UIKit.framework */,
+				A089043D1A43B24500C5A88D /* CoreGraphics.framework */,
+				A089043B1A43B23A00C5A88D /* Foundation.framework */,
+				A050433F1A42DB0A00AEC3F7 /* CoreText.framework */,
 				2998B4211A1F7F7900C95A00 /* Social.framework */,
 				2998B4171A1F7F3700C95A00 /* libc++.dylib */,
 				2998B4151A1F7F3000C95A00 /* libicucore.dylib */,
@@ -767,8 +857,58 @@
 				29EB255019E92B3600D7AA97 /* FacebookSDK.framework */,
 				29EB243419E9297900D7AA97 /* Parse.framework */,
 				29EB243519E9297900D7AA97 /* ParseFacebookUtils.framework */,
+				C22B48EE2A2A4364804F8264 /* libPods.a */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		82270D3C6CFDF8CEF9B89465 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD64EC1249EB86E5FC9575A7 /* Pods.debug.xcconfig */,
+				A3AE017C84F8FC6674B35D00 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A05043261A42D8FB00AEC3F7 /* FontIcons */ = {
+			isa = PBXGroup;
+			children = (
+				A05043271A42D8FB00AEC3F7 /* FAKFontAwesome.h */,
+				A05043281A42D8FB00AEC3F7 /* FAKFontAwesome.m */,
+				A05043291A42D8FB00AEC3F7 /* FAKFoundationIcons.h */,
+				A050432A1A42D8FB00AEC3F7 /* FAKFoundationIcons.m */,
+				A050432B1A42D8FB00AEC3F7 /* FAKIcon.h */,
+				A050432C1A42D8FB00AEC3F7 /* FAKIcon.m */,
+				A050432D1A42D8FB00AEC3F7 /* FAKIonIcons.h */,
+				A050432E1A42D8FB00AEC3F7 /* FAKIonIcons.m */,
+				A050432F1A42D8FB00AEC3F7 /* FAKZocial.h */,
+				A05043301A42D8FB00AEC3F7 /* FAKZocial.m */,
+				A05043321A42D8FB00AEC3F7 /* FontAwesomeKit.h */,
+			);
+			name = FontIcons;
+			path = FontAwesomeKit;
+			sourceTree = "<group>";
+		};
+		A08904431A43B43F00C5A88D /* CSStickyHeaderFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				A08904441A43B43F00C5A88D /* CSStickyHeaderFlowLayout.h */,
+				A08904451A43B43F00C5A88D /* CSStickyHeaderFlowLayout.m */,
+				A08904461A43B43F00C5A88D /* CSStickyHeaderFlowLayoutAttributes.h */,
+				A08904471A43B43F00C5A88D /* CSStickyHeaderFlowLayoutAttributes.m */,
+			);
+			path = CSStickyHeaderFlowLayout;
+			sourceTree = "<group>";
+		};
+		A089044A1A43B4E300C5A88D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A089044D1A43B58E00C5A88D /* CSCell.m */,
+				A089044E1A43B58E00C5A88D /* CSCell.h */,
+				A089044B1A43B4F800C5A88D /* CSParallaxHeader.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -778,9 +918,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29EB242819E9292600D7AA97 /* Build configuration list for PBXNativeTarget "bazr" */;
 			buildPhases = (
+				E91AE5959177E451A97C560D /* Check Pods Manifest.lock */,
 				29EB240119E9292500D7AA97 /* Sources */,
 				29EB240219E9292500D7AA97 /* Frameworks */,
 				29EB240319E9292500D7AA97 /* Resources */,
+				9C29111CC6BD090457C8A7D2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -843,24 +985,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				2930F93F19E96C73000F7799 /* tab_group@2x.png in Resources */,
+				A05043421A42ECDE00AEC3F7 /* NavBarBG.png in Resources */,
 				2930F93E19E96C73000F7799 /* blank_profile@2x.png in Resources */,
 				29271A6119F284B1009C308B /* MessagesView.xib in Resources */,
 				296DD5D91A1F52F400AB9F8C /* JSQMessagesCollectionViewCellOutgoing.xib in Resources */,
+				A050433C1A42D8FB00AEC3F7 /* foundation-icons.ttf in Resources */,
 				2930F94019E96C73000F7799 /* tab_messages@2x.png in Resources */,
 				296DD5DE1A1F52F400AB9F8C /* JSQMessagesLoadEarlierHeaderView.xib in Resources */,
+				A05043461A4314EC00AEC3F7 /* NavBar2Bazr.png in Resources */,
 				29271A6319F284B1009C308B /* ProfileView.xib in Resources */,
 				29271A6519F284B1009C308B /* LoginView.xib in Resources */,
 				296DD5E81A1F557900AB9F8C /* ProgressHUD.bundle in Resources */,
 				2930F93D19E96C73000F7799 /* blank_avatar@2x.png in Resources */,
 				296DD5E31A1F52F400AB9F8C /* JSQMessagesTypingIndicatorFooterView.xib in Resources */,
+				A08904511A448E6E00C5A88D /* GroupView.storyboard in Resources */,
+				A050433B1A42D8FB00AEC3F7 /* FontAwesome.otf in Resources */,
+				A05043441A42F5E900AEC3F7 /* bazrLogoForAppVector.png in Resources */,
 				296DD5D71A1F52F400AB9F8C /* JSQMessagesCollectionViewCellIncoming.xib in Resources */,
 				296DD5BA1A1F52F400AB9F8C /* JSQMessages.strings in Resources */,
+				A050433D1A42D8FB00AEC3F7 /* ionicons.ttf in Resources */,
 				2930F94219E96C73000F7799 /* tab_profile@2x.png in Resources */,
+				A050433E1A42D8FB00AEC3F7 /* zocial-regular-webfont.ttf in Resources */,
 				2930F94119E96C73000F7799 /* tab_private@2x.png in Resources */,
 				29EB241919E9292500D7AA97 /* LaunchScreen.xib in Resources */,
 				29271A5F19F284B1009C308B /* MessagesCell.xib in Resources */,
 				29271A6719F284B1009C308B /* RegisterView.xib in Resources */,
 				29271A5D19F284B1009C308B /* PrivateView.xib in Resources */,
+				A089044C1A43B4F800C5A88D /* CSParallaxHeader.xib in Resources */,
 				296DD5E11A1F52F400AB9F8C /* JSQMessagesToolbarContentView.xib in Resources */,
 				296DD5B91A1F52F400AB9F8C /* JSQMessagesAssets.bundle in Resources */,
 				296DD5C31A1F52F400AB9F8C /* JSQMessagesViewController.xib in Resources */,
@@ -870,6 +1021,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C29111CC6BD090457C8A7D2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E91AE5959177E451A97C560D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29EB240119E9292500D7AA97 /* Sources */ = {
@@ -884,12 +1068,14 @@
 				292719DC19F284AC009C308B /* AFURLConnectionOperation.m in Sources */,
 				296DD5BB1A1F52F400AB9F8C /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
 				29271A5C19F284B1009C308B /* PrivateView.m in Sources */,
+				A05043361A42D8FB00AEC3F7 /* FAKFontAwesome.m in Sources */,
 				29271A6619F284B1009C308B /* RegisterView.m in Sources */,
 				29271A5A19F284B1009C308B /* ChatView.m in Sources */,
 				296DD5D81A1F52F400AB9F8C /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
 				29271A5B19F284B1009C308B /* GroupView.m in Sources */,
 				292719E219F284AC009C308B /* UIAlertView+AFNetworking.m in Sources */,
 				296DD5CE1A1F52F400AB9F8C /* JSQMessage.m in Sources */,
+				A05043381A42D8FB00AEC3F7 /* FAKIcon.m in Sources */,
 				296DD5BD1A1F52F400AB9F8C /* UIColor+JSQMessages.m in Sources */,
 				296DD5E21A1F52F400AB9F8C /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
 				296DD5BE1A1F52F400AB9F8C /* UIDevice+JSQMessages.m in Sources */,
@@ -903,11 +1089,13 @@
 				29271A6A19F284B1009C308B /* messages.m in Sources */,
 				296DD5BF1A1F52F400AB9F8C /* UIImage+JSQMessages.m in Sources */,
 				296DD5D51A1F52F400AB9F8C /* JSQMessagesCollectionViewCell.m in Sources */,
+				A08904481A43B43F00C5A88D /* CSStickyHeaderFlowLayout.m in Sources */,
 				29EB240E19E9292500D7AA97 /* AppDelegate.m in Sources */,
 				296DD5E01A1F52F400AB9F8C /* JSQMessagesToolbarContentView.m in Sources */,
 				29271A6419F284B1009C308B /* LoginView.m in Sources */,
 				292719E519F284AC009C308B /* UIProgressView+AFNetworking.m in Sources */,
 				292719D919F284AC009C308B /* AFHTTPSessionManager.m in Sources */,
+				A089044F1A43B58E00C5A88D /* CSCell.m in Sources */,
 				296DD5C81A1F52F400AB9F8C /* JSQMessagesToolbarButtonFactory.m in Sources */,
 				292719E019F284AC009C308B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				292719D819F284AC009C308B /* AFHTTPRequestOperationManager.m in Sources */,
@@ -919,8 +1107,10 @@
 				292719E319F284AC009C308B /* UIButton+AFNetworking.m in Sources */,
 				296DD5CC1A1F52F400AB9F8C /* JSQLocationMediaItem.m in Sources */,
 				292719E619F284AC009C308B /* UIRefreshControl+AFNetworking.m in Sources */,
+				A05043371A42D8FB00AEC3F7 /* FAKFoundationIcons.m in Sources */,
 				296DD5C61A1F52F400AB9F8C /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
 				292719E719F284AC009C308B /* UIWebView+AFNetworking.m in Sources */,
+				A08904491A43B43F00C5A88D /* CSStickyHeaderFlowLayoutAttributes.m in Sources */,
 				296DD5D01A1F52F400AB9F8C /* JSQMessagesBubbleImage.m in Sources */,
 				29271A6B19F284B1009C308B /* utilities.m in Sources */,
 				29271A6019F284B1009C308B /* MessagesView.m in Sources */,
@@ -937,9 +1127,11 @@
 				296DD5DC1A1F52F400AB9F8C /* JSQMessagesLabel.m in Sources */,
 				296DD5C11A1F52F400AB9F8C /* JSQMessagesKeyboardController.m in Sources */,
 				296DD5D41A1F52F400AB9F8C /* JSQMessagesCollectionView.m in Sources */,
+				A05043391A42D8FB00AEC3F7 /* FAKIonIcons.m in Sources */,
 				296DD5DD1A1F52F400AB9F8C /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
 				296DD5D11A1F52F400AB9F8C /* JSQPhotoMediaItem.m in Sources */,
 				29271A6219F284B1009C308B /* ProfileView.m in Sources */,
+				A050433A1A42D8FB00AEC3F7 /* FAKZocial.m in Sources */,
 				29EB240B19E9292500D7AA97 /* main.m in Sources */,
 				29271A5E19F284B1009C308B /* MessagesCell.m in Sources */,
 				296DD5C41A1F52F400AB9F8C /* JSQMessagesAvatarImageFactory.m in Sources */,
@@ -1063,6 +1255,7 @@
 		};
 		29EB242919E9292600D7AA97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD64EC1249EB86E5FC9575A7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1072,16 +1265,19 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = app/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = bazr;
 				SWIFT_OBJC_BRIDGING_HEADER = "Classes/Tabs/bazr-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		29EB242A19E9292600D7AA97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3AE017C84F8FC6674B35D00 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1091,10 +1287,12 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = app/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = bazr;
 				SWIFT_OBJC_BRIDGING_HEADER = "Classes/Tabs/bazr-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

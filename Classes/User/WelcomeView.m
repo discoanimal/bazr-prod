@@ -10,18 +10,35 @@
 #import "WelcomeView.h"
 #import "LoginView.h"
 #import "RegisterView.h"
+#import "FontAwesomeKit/FontAwesomeKit.h"
 
 @implementation WelcomeView
 
+- (void)viewWillAppear{
+    [self.navigationController.navigationBar setHidden:YES];
+}
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)viewDidLoad
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[super viewDidLoad];
-	self.title = @"Welcome to BAZR";
+	self.title = @"";
+    [self.navigationController.navigationBar setHidden:YES];
+    
+    FAKFontAwesome *starIcon = [FAKFontAwesome facebookIconWithSize:25];
+    [starIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    self.phoneLabel.attributedText = [starIcon attributedString];
+    
+    FAKFontAwesome *envIcon = [FAKFontAwesome envelopeIconWithSize:25];
+    [envIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    self.envelopeLabel.attributedText = [envIcon attributedString];
+
+    
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 	[self.navigationItem setBackBarButtonItem:backButton];
+//    [self.navigationController setNavigationBarHidden:YES];
+   
 }
 
 #pragma mark - User actions

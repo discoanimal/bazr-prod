@@ -9,6 +9,7 @@
 #import "MessagesView.h"
 #import "ProfileView.h"
 #import "NavigationController.h"
+#import "FontAwesomeKit/FontAwesomeKit.h"
 
 @implementation AppDelegate
 
@@ -32,7 +33,7 @@
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
-	self.groupView = [[GroupView alloc] init];
+	self.groupView = [[UIStoryboard storyboardWithName:@"GroupView" bundle:nil] instantiateViewControllerWithIdentifier:@"GroupView"];
 	self.privateView = [[PrivateView alloc] init];
 	self.messagesView = [[MessagesView alloc] init];
 	self.profileView = [[ProfileView alloc] init];
@@ -49,7 +50,8 @@
 
 	self.window.rootViewController = self.tabBarController;
 	[self.window makeKeyAndVisible];
-	//---------------------------------------------------------------------------------------------------------------------------------------------
+	
+    
 	return YES;
 }
 

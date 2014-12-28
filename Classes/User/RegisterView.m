@@ -43,6 +43,7 @@
 {
 	[super viewDidLoad];
 	self.title = @"Sign Up";
+    [self.navigationController.navigationBar setHidden:NO];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	[self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)]];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
