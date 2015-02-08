@@ -8,6 +8,8 @@
 #import "ChatView.h"
 #import "CSCell.h"
 #import "CSStickyHeaderFlowLayout.h"
+#import "DateTools.h"
+#import "NSDate+DateTools.h"
 
 #define METERS_TO_FEET  3.2808399
 #define METERS_TO_MILES 0.000621371192
@@ -36,7 +38,9 @@
 @property (nonatomic, weak) UIButton *refreshButton;
 @property (nonatomic, weak) UIButton *filterButton;
 @property (nonatomic, weak) UIView *filterView;
-@property (nonatomic, weak) MKMapView *mapView;
+@property (nonatomic, weak) NSString *meString;
+@property (nonatomic, weak) NSDate *myDate;
+@property (nonatomic, weak) UILabel *dateLabel;
 
 @end
 
@@ -48,8 +52,9 @@
     if (self) {
         self.sections = chatrooms;
         self.headerNib = [UINib nibWithNibName:@"CSParallaxHeader" bundle:nil];
-        [self.tabBarItem setImage:[UIImage imageNamed:@"tab_group"]];
-        self.tabBarItem.title = @"POSTS";
+        [self.tabBarItem setImage:[UIImage imageNamed:@"tab_home"]];
+        self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        self.title = nil;
     }
     return self;
 }
@@ -73,7 +78,7 @@
     self.locationManager = [[CLLocationManager alloc] init];
     [self.locationManager requestAlwaysAuthorization];
     
-    self.title = @"BAZR";
+    self.title = @"";
     chatrooms = [[NSMutableArray alloc] init];
     // self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self action:@selector(actionNew)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(actionPost)];
@@ -142,6 +147,38 @@
 //        cell.textLabel.text = [[obj allKeys] firstObject];
         PFObject *chatroom = chatrooms[indexPath.section];
         cell.textLabel.text = chatroom[PF_CHATROOMS_NAME];
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+//
+//        NSString *stringFromDate = [formatter stringFromDate:chatroom[PF_CHATROOMS_UPDATEDAT]];
+//        
+//        cell.dateLabel.text = stringFromDate;
+        
+        self.myDate = [chatroom updatedAt];
+        self.meString = [self.myDate shortTimeAgoSinceNow];
+        
+        cell.dateLabel.text = [NSString stringWithString: self.meString];
+        
+//        NSString *meString = [NSString stringWithFormat:@"MyString"];
+//        cell.dateLabel.text = meString;
+        
+//        NSDateFormatter *df = [[NSDateFormatter alloc] init];
+//        [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+//        NSString *stringFromDate = [df stringFromDate:updated];
+//        NSDate *myDate = [df dateFromString: stringFromDate];
+//        cell.dateLabel.text = self.myDate.shortTimeAgoSinceNow;
+        
+        
+//        NSDate *timeAgoDate = [NSDate dateWithTimeIntervalSinceNow:-4];
+//        NSLog(@"Time Ago: %@", timeAgoDate.shortTimeAgoSinceNow);
+        
+//        NSString *labler = [NSString stringWithFormat:@"Time Ago:", updated.timeAgoSinceNow];
+        
+//        NSLog(@"Time Ago: %@", timeAgoDate.timeAgoSinceNow);
+//        NSLog(@"Time Ago: %@", timeAgoDate.timeAgoSinceNow);
+//        cell.dateLabel.text = labler;
+        
 //        [cell.chatButton addTarget:self action:@selector(chatButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     } else if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
@@ -153,9 +190,9 @@
     return nil;
 }
 
--(void)chatButtonPressed:(CSCell *)csCell {
-    NSLog(@"Button Pressed");
-}
+//-(void)chatButtonPressed:(CSCell *)csCell {
+//    NSLog(@"Button Pressed");
+//}
 
 
 #pragma mark - User actions

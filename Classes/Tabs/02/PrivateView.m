@@ -42,8 +42,10 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self)
 	{
-		[self.tabBarItem setImage:[UIImage imageNamed:@"tab_group"]];
-		self.tabBarItem.title = @"Users";
+        [self.tabBarItem setImage:[UIImage imageNamed:@"tab_users"]];
+        self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        self.title = nil;
+		self.tabBarItem.title = @"";
 	}
 	return self;
 }
@@ -53,7 +55,7 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[super viewDidLoad];
-	self.title = @"Users";
+	self.title = @"";
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	self.tableView.tableHeaderView = viewHeader;
 	self.tableView.separatorInset = UIEdgeInsetsZero;

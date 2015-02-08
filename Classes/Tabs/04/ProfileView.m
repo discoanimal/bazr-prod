@@ -47,7 +47,10 @@
 	if (self)
 	{
 		[self.tabBarItem setImage:[UIImage imageNamed:@"tab_profile"]];
-		self.tabBarItem.title = @"Profile";
+        self.tabBarItem.title = @"";
+        self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        self.title = nil;
+
 	}
 	return self;
 }
@@ -57,7 +60,7 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[super viewDidLoad];
-	self.title = @"Profile";
+	self.title = @"";
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Log out" style:UIBarButtonItemStylePlain target:self
 																			action:@selector(actionLogout)];

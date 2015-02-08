@@ -10,7 +10,7 @@
 #import "WelcomeView.h"
 #import "LoginView.h"
 #import "RegisterView.h"
-#import "FontAwesomeKit/FontAwesomeKit.h"
+#import "FontAwesomeKit.h"
 
 @implementation WelcomeView
 

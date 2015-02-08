@@ -8,8 +8,9 @@
 #import "PrivateView.h"
 #import "MessagesView.h"
 #import "ProfileView.h"
+#import "PostView.h"
 #import "NavigationController.h"
-#import "FontAwesomeKit/FontAwesomeKit.h"
+#import "FontAwesomeKit.h"
 
 @implementation AppDelegate
 
@@ -32,21 +33,60 @@
 	[PFImageView class];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
 	
 	self.groupView = [[UIStoryboard storyboardWithName:@"GroupView" bundle:nil] instantiateViewControllerWithIdentifier:@"GroupView"];
 	self.privateView = [[PrivateView alloc] init];
 	self.messagesView = [[MessagesView alloc] init];
 	self.profileView = [[ProfileView alloc] init];
+    self.postView = [[PostView alloc] init];
 	
 	NavigationController *navController1 = [[NavigationController alloc] initWithRootViewController:self.groupView];
 	NavigationController *navController2 = [[NavigationController alloc] initWithRootViewController:self.privateView];
 	NavigationController *navController3 = [[NavigationController alloc] initWithRootViewController:self.messagesView];
 	NavigationController *navController4 = [[NavigationController alloc] initWithRootViewController:self.profileView];
+    NavigationController *navController5 = [[NavigationController alloc] initWithRootViewController:self.postView];
     
 	self.tabBarController = [[UITabBarController alloc] init];
-	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, navController3, navController4, nil];
+	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, navController5, navController3, navController4, nil];
 	self.tabBarController.tabBar.translucent = NO;
 	self.tabBarController.selectedIndex = 0;
+    
+    
+    
+    // set the bar background color
+//    UIColor *backgroundColor = [UIColor greenColor];
+//    [[UITabBar appearance] setBackgroundImage:[AppDelegate imageFromColor:backgroundColor forSize:CGSizeMake(320, 49) withCornerRadius:0]];
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"TabBarBG"]];
+
+    
+    // set the text color for selected state
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+    
+    // set the text color for unselected state
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+    
+    // set the selected icon color
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    // remove the shadow
+    [[UITabBar appearance] setShadowImage:nil];
+    
+    // Set the dark color to selected tab (the dimmed background)
+    
+    CGFloat tabWidth = self.window.frame.size.width / self.tabBarController.viewControllers.count;
+    [[UITabBar appearance] setSelectionIndicatorImage:[AppDelegate imageFromColor:[UIColor colorWithRed:19/255.0 green:19/255.0 blue:19/255.0 alpha:0.8] forSize:CGSizeMake(tabWidth, 49) withCornerRadius:0]];
+    
+    
+    
+    UISplitViewController *settingsViewController = [[UISplitViewController alloc] init];
+    UINavigationController *settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+    
+    // LOOK AT THIS
+    settingsNavigationController.tabBarItem.image = [[UIImage imageNamed:@"IconSetting"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
 
 	self.window.rootViewController = self.tabBarController;
 	[self.window makeKeyAndVisible];
@@ -131,6 +171,38 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[self.messagesView loadMessages];
+}
+
+
+// UIColor into Image
++ (UIImage *)imageFromColor:(UIColor *)color forSize:(CGSize)size withCornerRadius:(CGFloat)radius
+{
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    // Begin a new image that will be the new image with the rounded corners
+    // (here with the size of an UIImageView)
+    UIGraphicsBeginImageContext(size);
+    
+    // Add a clip before drawing anything, in the shape of an rounded rect
+    [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius] addClip];
+    // Draw your image
+    [image drawInRect:rect];
+    
+    // Get the image, here setting the UIImageView image
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // Lets forget about that we were drawing
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 @end

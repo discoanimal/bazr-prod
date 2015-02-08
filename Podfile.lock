@@ -1,24 +1,10 @@
 PODS:
-  - FontAwesomeKit (2.1.8):
-    - FontAwesomeKit/Core (= 2.1.8)
-    - FontAwesomeKit/FontAwesome (= 2.1.8)
-    - FontAwesomeKit/FoundationIcons (= 2.1.8)
-    - FontAwesomeKit/IonIcons (= 2.1.8)
-    - FontAwesomeKit/Zocial (= 2.1.8)
-  - FontAwesomeKit/Core (2.1.8)
-  - FontAwesomeKit/FontAwesome (2.1.8):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/FoundationIcons (2.1.8):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/IonIcons (2.1.8):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/Zocial (2.1.8):
-    - FontAwesomeKit/Core
+  - DateTools (1.5.0)
 
 DEPENDENCIES:
-  - FontAwesomeKit (~> 2.1.0)
+  - DateTools
 
 SPEC CHECKSUMS:
-  FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
+  DateTools: 7df78f0c4719eb28cfd2d58a90fafd036e73156c
 
 COCOAPODS: 0.35.0

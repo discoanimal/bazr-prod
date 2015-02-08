@@ -44,7 +44,10 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	{
 		[self.tabBarItem setImage:[UIImage imageNamed:@"tab_messages"]];
-		self.tabBarItem.title = @"Messages";
+		self.tabBarItem.title = @"";
+        self.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        self.title = nil;
+
 		//-----------------------------------------------------------------------------------------------------------------------------------------
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionCleanup) name:NOTIFICATION_USER_LOGGED_OUT object:nil];
 	}
@@ -56,7 +59,7 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	[super viewDidLoad];
-	self.title = @"Messages";
+	self.title = @"";
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	[tableMessages registerNib:[UINib nibWithNibName:@"MessagesCell" bundle:nil] forCellReuseIdentifier:@"MessagesCell"];
 	tableMessages.tableFooterView = [[UIView alloc] init];
