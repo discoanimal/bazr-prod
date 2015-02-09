@@ -134,6 +134,9 @@
      //    cell.textLabel.text = [[obj allValues] firstObject];
      //    cell.detailTextLabel.text = chatroom[PF_CHATROOMS_DESCRIPTION];
      //	return cell;
+    
+    cell.selected = YES;
+    [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
 
     return cell;
 }
@@ -159,6 +162,8 @@
         self.meString = [self.myDate shortTimeAgoSinceNow];
         
         cell.dateLabel.text = [NSString stringWithString: self.meString];
+        cell.selected = YES;
+        [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
         
 //        NSString *meString = [NSString stringWithFormat:@"MyString"];
 //        cell.dateLabel.text = meString;
@@ -185,6 +190,7 @@
         UICollectionReusableView *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                                             withReuseIdentifier:@"header"
                                                                                    forIndexPath:indexPath];
+        [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
         return cell;
     }
     return nil;
@@ -285,19 +291,20 @@
 //	return cell;
 //}
 
-//- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-//    PFObject *chatroom = chatrooms[indexPath.section];
-//    NSString *roomId = chatroom.objectId;
-//    CreateMessageItem([PFUser currentUser], roomId, chatroom[PF_CHATROOMS_NAME]);
-//    ChatView *chatView = [[ChatView alloc] initWith:roomId];
-//    chatView.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:chatView animated:YES];
-//}
-
--(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    printf("This is a neat command!\n");
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    [collectionView deselectItemAtIndexPath:indexPath animated:NO];
+    PFObject *chatroom = chatrooms[indexPath.section];
+    NSLog(@"did SelectItem %d-%d",indexPath.section,indexPath.item);
+    NSString *roomId = chatroom.objectId;
+    CreateMessageItem([PFUser currentUser], roomId, chatroom[PF_CHATROOMS_NAME]);
+    ChatView *chatView = [[ChatView alloc] initWith:roomId];
+    chatView.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:chatView animated:YES];
 }
+
+//-(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    printf("This is a neat command!\n");
+//}
 
 #pragma mark - Table view delegate
 //// From Old File

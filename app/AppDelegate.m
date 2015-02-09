@@ -40,17 +40,18 @@
 	self.privateView = [[PrivateView alloc] init];
 	self.messagesView = [[MessagesView alloc] init];
 	self.profileView = [[ProfileView alloc] init];
-    self.postView = [[PostView alloc] init];
+//    self.postView = [[PostView alloc] init];
 	
 	NavigationController *navController1 = [[NavigationController alloc] initWithRootViewController:self.groupView];
 	NavigationController *navController2 = [[NavigationController alloc] initWithRootViewController:self.privateView];
 	NavigationController *navController3 = [[NavigationController alloc] initWithRootViewController:self.messagesView];
 	NavigationController *navController4 = [[NavigationController alloc] initWithRootViewController:self.profileView];
-    NavigationController *navController5 = [[NavigationController alloc] initWithRootViewController:self.postView];
+//    NavigationController *navController5 = [[NavigationController alloc] initWithRootViewController:self.postView];
     
 	self.tabBarController = [[UITabBarController alloc] init];
-	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, navController5, navController3, navController4, nil];
-	self.tabBarController.tabBar.translucent = NO;
+	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, navController3, navController4, nil];
+//	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, navController5, navController3, navController4, nil];
+    self.tabBarController.tabBar.translucent = NO;
 	self.tabBarController.selectedIndex = 0;
     
     
