@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CategoryView.h"
 
-@interface PostView : UITableViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate>
+#import "CustomPickerDefine.h"
+
+@interface PostView : UITableViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, CategoryDelegate, SelectorViewDelegate>
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 
 @end

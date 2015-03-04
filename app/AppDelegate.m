@@ -11,6 +11,9 @@
 #import "PostView.h"
 #import "NavigationController.h"
 #import "FontAwesomeKit.h"
+#import "MFSideMenuContainerViewConroller+TabViewDelegate.h"
+
+#define USE_TAB_POST
 
 @implementation AppDelegate
 
@@ -40,21 +43,26 @@
 	self.privateView = [[PrivateView alloc] init];
 	self.messagesView = [[MessagesView alloc] init];
 	self.profileView = [[ProfileView alloc] init];
-//    self.postView = [[PostView alloc] init];
-	
+#ifdef USE_TAB_POST
+    self.postView = [[UIStoryboard storyboardWithName:@"PostView" bundle:nil] instantiateViewControllerWithIdentifier:@"PostView"];
+#endif
+    
 	NavigationController *navController1 = [[NavigationController alloc] initWithRootViewController:self.groupView];
 	NavigationController *navController2 = [[NavigationController alloc] initWithRootViewController:self.privateView];
 	NavigationController *navController3 = [[NavigationController alloc] initWithRootViewController:self.messagesView];
 	NavigationController *navController4 = [[NavigationController alloc] initWithRootViewController:self.profileView];
-//    NavigationController *navController5 = [[NavigationController alloc] initWithRootViewController:self.postView];
+#ifdef USE_TAB_POST
+    NavigationController *navController5 = [[NavigationController alloc] initWithRootViewController:self.postView];
+#endif
     
 	self.tabBarController = [[UITabBarController alloc] init];
+#ifndef USE_TAB_POST
 	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, navController3, navController4, nil];
-//	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, navController5, navController3, navController4, nil];
+#else
+	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, navController5, navController3, navController4, nil];
+#endif
     self.tabBarController.tabBar.translucent = NO;
 	self.tabBarController.selectedIndex = 0;
-    
-    
     
     // set the bar background color
 //    UIColor *backgroundColor = [UIColor greenColor];
@@ -69,7 +77,6 @@
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
     
     // set the selected icon color
-    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
     // remove the shadow
@@ -89,7 +96,16 @@
     settingsNavigationController.tabBarItem.image = [[UIImage imageNamed:@"IconSetting"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
 
-	self.window.rootViewController = self.tabBarController;
+    UIViewController *catView = [[UIStoryboard storyboardWithName:@"PostView" bundle:nil] instantiateViewControllerWithIdentifier:@"CategoryView"];
+    
+    MFSideMenuContainerViewConrollerTabView *container = [MFSideMenuContainerViewConrollerTabView containerWithCenterViewController:self.tabBarController leftMenuViewController:nil rightMenuViewController:nil];
+    
+    self.tabBarController.delegate = container;
+
+    [container setRightMenuViewController:catView];
+    [container setMenuWidth:120];
+    
+	self.window.rootViewController = container;
 	[self.window makeKeyAndVisible];
 	
     

@@ -50,6 +50,11 @@
 #define		PF_POSTS_TEXTKEY                    @"textKey"              //	String
 #define		PF_POSTS_LOCATIONKEY                @"locationKey"          //	String
 #define		PF_POSTS_NAMEKEY                    @"nameKey"              //	String
+#define		PF_POSTS_DESCRIPTIONKEY             @"description"          //	String
+#define     PF_POSTS_POSTTIMEKEY                @"postDate"             //  Date
+#define     PF_POSTS_EXPIRETIMEKEY              @"expireDate"           //  Date
+#define     PF_POSTS_CALEGORYKEY                @"category"             //  String
+#define     PF_POSTS_PAYMENTKEY                 @"payment"              //  String
 
 // NSNotification userInfo keys:
 #define		PF_POSTS_FILTERDISTANCEKEY          @"filterDistance"       //	String

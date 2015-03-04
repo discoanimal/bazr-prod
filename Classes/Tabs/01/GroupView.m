@@ -258,7 +258,9 @@
 			[chatrooms removeAllObjects];
 			for (PFObject *object in objects)
 			{
-				[chatrooms addObject:object];
+                //modified by DaYong Li. in order to appear at the top of the list
+                //[chatrooms addObject:object];
+				[chatrooms insertObject:object atIndex:0];
 			}
 			[ProgressHUD dismiss];
 			[self.collectionView reloadData];
