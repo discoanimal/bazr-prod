@@ -41,7 +41,6 @@ shouldSelectViewController:(UIViewController *)viewController
     if (super.menuState == MFSideMenuStateClosed)
         return YES;
     
-    [super toggleRightSideMenuCompletion:nil];
     return NO;
 }
 

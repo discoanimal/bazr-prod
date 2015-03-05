@@ -45,6 +45,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *txtExpiraton;
 @property (weak, nonatomic) IBOutlet UITextField *txtPayment;
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
+@property (weak, nonatomic) IBOutlet UILabel *txtCategories;
 
 - (IBAction)pressExpiration:(id)sender;
 
@@ -61,7 +62,7 @@
 @synthesize viewHeader;
 @synthesize cellTitle, cellCategory, cellPayment, cellDescription;
 
-@synthesize txtTitle, txtExpiraton, txtPayment, txtDescription;
+@synthesize txtTitle, txtExpiraton, txtPayment, txtDescription, txtCategories;
 //
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -253,6 +254,27 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
     categories = cates;
+    
+    if (!categories) return;
+    
+    
+    if ([categories count] <= 0)
+    {
+        txtCategories.text = @"All Categories";
+    }
+    else
+    {
+        txtCategories.text = @"";
+        for (NSObject *obj in categories) {
+            NSString *strCaption = (NSString*)obj;
+            
+            if ([txtCategories.text length] > 0)
+                txtCategories.text= [NSString stringWithFormat:@"%@, %@", txtCategories.text, strCaption];
+            else
+                txtCategories.text = strCaption;
+        }
+    }
+    
     [self.menuContainerViewController setMenuState:MFSideMenuStateClosed];
 }
 
