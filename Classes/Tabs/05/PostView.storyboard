@@ -370,14 +370,14 @@
                                 <exclude reference="k3C-lM-LxM"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="B1g-gl-yLt"/>
-                                <exclude reference="Dp1-h4-Ii5"/>
-                                <exclude reference="cti-7T-R3H"/>
-                                <exclude reference="huW-dF-mce"/>
                                 <exclude reference="5eQ-0f-CKY"/>
                                 <exclude reference="gxb-gQ-RhQ"/>
                                 <exclude reference="hIc-Qc-yKq"/>
                                 <exclude reference="nPY-Rk-xaw"/>
+                                <exclude reference="B1g-gl-yLt"/>
+                                <exclude reference="Dp1-h4-Ii5"/>
+                                <exclude reference="cti-7T-R3H"/>
+                                <exclude reference="huW-dF-mce"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -385,14 +385,14 @@
                                 <include reference="k3C-lM-LxM"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="B1g-gl-yLt"/>
-                                <include reference="Dp1-h4-Ii5"/>
-                                <include reference="cti-7T-R3H"/>
-                                <include reference="huW-dF-mce"/>
                                 <include reference="5eQ-0f-CKY"/>
                                 <include reference="gxb-gQ-RhQ"/>
                                 <include reference="hIc-Qc-yKq"/>
                                 <include reference="nPY-Rk-xaw"/>
+                                <include reference="B1g-gl-yLt"/>
+                                <include reference="Dp1-h4-Ii5"/>
+                                <include reference="cti-7T-R3H"/>
+                                <include reference="huW-dF-mce"/>
                             </mask>
                         </variation>
                     </tableViewCellContentView>

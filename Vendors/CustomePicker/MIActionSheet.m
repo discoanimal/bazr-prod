@@ -11,8 +11,11 @@
 #define COLOR_TEXT          [UIColor colorWithRed:0 green:0 blue:0 alpha:1.0]
 #define COLOR_BACKGROUND    [UIColor whiteColor]
 
-#define WIDTH               320
-#define HEIGHT              162 + 64
+#define BUTTON_WIDTH        80
+#define BAR_HEIGHT          64
+#define PICKER_HEIGHT       162
+#define WIDTH               UIScreen.mainScreen.bounds.size.width
+#define HEIGHT              PICKER_HEIGHT + BAR_HEIGHT
 
 //#define CAPTION_CANCEL      @"取消"
 //#define CAPTION_OK          @"完成"
@@ -39,21 +42,22 @@
 - (id) init
 {
     self = [super init];
-    strCaption = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 46)];
+    
+    strCaption = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 46)];
     [strCaption setTextAlignment:NSTextAlignmentCenter];
     
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 46)];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 46)];
     //    [imgView setBackgroundColor:[UIColor clearColor]];
     [imgView setImage:[UIImage imageNamed:@"title_bar.png"]];
     
-    UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 6, 60, 30)];
+    UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 6, BUTTON_WIDTH, 30)];
     [cancelBtn setTitle:CAPTION_CANCEL forState:UIControlStateNormal];
     [cancelBtn setBackgroundColor:[UIColor whiteColor]];
     [cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [cancelBtn addTarget:self action:@selector(onCanceled:) forControlEvents:UIControlEventTouchUpInside];
     cancelBtn.layer.cornerRadius = 5;
     
-    UIButton *okBtn = [[UIButton alloc] initWithFrame:CGRectMake(240, 6, 60, 30)];
+    UIButton *okBtn = [[UIButton alloc] initWithFrame:CGRectMake(WIDTH -  BUTTON_WIDTH - 20, 6, BUTTON_WIDTH, 30)];
     [okBtn setTitle:CAPTION_OK forState:UIControlStateNormal];
     [okBtn setBackgroundColor:[UIColor whiteColor]];
     [okBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -74,7 +78,7 @@
 - (void) setPickerValue : (UIPickerView<CustomPickerView>*)_picker value : (NSString*) value
 {
     picker = _picker;
-    [picker setFrame:CGRectMake(0, 46, 320, 162)];
+    [picker setFrame:CGRectMake(0, 46, WIDTH, PICKER_HEIGHT)];
     
 //    picker.showsSelectionIndicator = YES;
     picker.backgroundColor = [UIColor whiteColor];
