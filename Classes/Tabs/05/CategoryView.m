@@ -108,7 +108,10 @@ CategoryView *_shareInstence;
     NSMutableDictionary *categories;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property (strong, nonatomic) IBOutlet UIView *hdrTable;
+@property (strong, nonatomic) IBOutlet UIView *ftrTable;
+
 @property (weak, nonatomic) IBOutlet UIButton *btnClose;
 @property (weak, nonatomic) IBOutlet UIButton *btnSelectAll;
 
@@ -124,7 +127,7 @@ CategoryView *_shareInstence;
 }
 
 @synthesize delegate;
-@synthesize tableView, hdrTable;
+@synthesize tableView, hdrTable, ftrTable;
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -194,46 +197,24 @@ CategoryView *_shareInstence;
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 100;
+    return 60;
 }
 
 - (UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     return hdrTable;
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 60;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (UIView*) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return ftrTable;
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -265,7 +246,8 @@ CategoryView *_shareInstence;
 #pragma mark - CategoryCellDelegate
 - (void) selectCateItem:(NSInteger)index
 {
-    NSString *strName = [NSString stringWithFormat:@"Cat %ld", (long)index];
+    NSString *strKey = [NSString stringWithFormat:@"Cat %ld", (long)index];
+    NSString *strValue = [NSString stringWithFormat:@"Cat %ld", (long)index + 1];
 
     if (bSelectAll)
     {
@@ -275,20 +257,20 @@ CategoryView *_shareInstence;
 //        if ([categories objectForKey:strName])
         {
             [categories removeAllObjects];
-            [categories setObject:strName forKey:strName];
+            [categories setObject:strValue forKey:strKey];
         }
         
         [tableView reloadData];
         return;
     }
     
-    if ([categories objectForKey:strName])
+    if ([categories objectForKey:strKey])
     {
-        [categories removeObjectForKey:strName];
+        [categories removeObjectForKey:strKey];
     }
     else
     {
-        [categories setObject:strName forKey:strName];
+        [categories setObject:strValue forKey:strKey];
     }
 }
 
@@ -297,9 +279,9 @@ CategoryView *_shareInstence;
     if (bSelectAll)
         return NO;
     
-    NSString *strName = [NSString stringWithFormat:@"Cat %ld", (long)index];
+    NSString *strKey = [NSString stringWithFormat:@"Cat %ld", (long)index];
 
-    return [categories objectForKey:strName]?YES:NO;
+    return [categories objectForKey:strKey]?YES:NO;
 }
 
 #pragma mark - User Action Functions
@@ -330,6 +312,11 @@ CategoryView *_shareInstence;
     if (bSelectAll)
         [categories removeAllObjects];
     
+    else if ([categories count] <= 0)
+    {
+        [delegate onSelectCategory:nil];
+        return;
+    }
     [delegate onSelectCategory:categories];
 }
 

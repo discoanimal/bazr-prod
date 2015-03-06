@@ -24,6 +24,7 @@
 
 @interface PostView ()
 {
+    NSMutableArray      *aryCateItems;
     NSMutableDictionary *categories;
     
     MIActionSheet*      actionSheet;
@@ -46,6 +47,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtPayment;
 @property (weak, nonatomic) IBOutlet UITextField *txtDescription;
 @property (weak, nonatomic) IBOutlet UILabel *txtCategories;
+@property (weak, nonatomic) IBOutlet UIView *vwCategories;
+
 
 - (IBAction)pressExpiration:(id)sender;
 
@@ -61,8 +64,9 @@
 
 @synthesize viewHeader;
 @synthesize cellTitle, cellCategory, cellPayment, cellDescription;
+@synthesize txtTitle, txtExpiraton, txtPayment, txtDescription,txtCategories;
+@synthesize vwCategories;
 
-@synthesize txtTitle, txtExpiraton, txtPayment, txtDescription, txtCategories;
 //
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -96,6 +100,7 @@
     actionSheet.delegate = self;
     datePicker = [[MIDatePickerView alloc] init];
 
+    aryCateItems = [[NSMutableArray alloc] init];
     //---------------------------------------------------------------------------------------------------------------------------------------------
 }
 
@@ -107,11 +112,13 @@
     //---------------------------------------------------------------------------------------------------------------------------------------------
     if ([PFUser currentUser] != nil)
     {
+        [self dismissKeyboard];
         txtTitle.text = @"";
         txtDescription.text = @"";
         txtPayment.text = @"";
         categories = nil;
         txtExpiraton.text = @"Now";
+        [self removeCategoryItems];
         
         postDate = [[NSDate alloc] init];
         expireDate = [[NSDate alloc] initWithTimeInterval:3600 sinceDate:postDate];
@@ -132,48 +139,86 @@
     [self.view endEditing:YES];
 }
 
+#define LABEL_HEIGHT    30
+#define LABEL_WIDTH     60
+#define LABEL_GAP       20
 
-//#pragma mark - UIImagePickerControllerDelegate
-//
-////-------------------------------------------------------------------------------------------------------------------------------------------------
-//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-////-------------------------------------------------------------------------------------------------------------------------------------------------
-//{
-//    UIImage *image = info[UIImagePickerControllerEditedImage];
-//    //---------------------------------------------------------------------------------------------------------------------------------------------
-//    if (image.size.width > 140) image = ResizeImage(image, 140, 140);
-//    //---------------------------------------------------------------------------------------------------------------------------------------------
-//    PFFile *filePicture = [PFFile fileWithName:@"picture.jpg" data:UIImageJPEGRepresentation(image, 0.6)];
-//    [filePicture saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
-//     {
-//         if (error != nil) [ProgressHUD showError:@"Network error."];
-//     }];
-//    //---------------------------------------------------------------------------------------------------------------------------------------------
-//    imageUser.image = image;
-//    //---------------------------------------------------------------------------------------------------------------------------------------------
-//    
-//    //---------------------------------------------------------------------------------------------------------------------------------------------
-//    if (image.size.width > 30) image = ResizeImage(image, 30, 30);
-//    //---------------------------------------------------------------------------------------------------------------------------------------------
-//    PFFile *fileThumbnail = [PFFile fileWithName:@"thumbnail.jpg" data:UIImageJPEGRepresentation(image, 0.6)];
-//    [fileThumbnail saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
-//     {
-//         if (error != nil) [ProgressHUD showError:@"Network error."];
-//     }];
-//    //---------------------------------------------------------------------------------------------------------------------------------------------
-//    
-//    //---------------------------------------------------------------------------------------------------------------------------------------------
-//    PFUser *user = [PFUser currentUser];
-//    user[PF_USER_PICTURE] = filePicture;
-//    user[PF_USER_THUMBNAIL] = fileThumbnail;
-//    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
-//     {
-//         if (error != nil) [ProgressHUD showError:@"Network error."];
-//     }];
-//    //---------------------------------------------------------------------------------------------------------------------------------------------
-//    [picker dismissViewControllerAnimated:YES completion:nil];
-//}
-//
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+- (void) addCategoryItem:(NSString*) strValue color:(UIColor*)backColor
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+{
+    CGRect vwframe = vwCategories.frame;
+    NSInteger posY = 0;
+    
+    UILabel *lastLabel = nil;
+    
+    if ([aryCateItems count] > 0)
+        lastLabel = [aryCateItems objectAtIndex:[aryCateItems count] - 1];
+    
+    NSInteger posX = (lastLabel)?lastLabel.frame.origin.x + lastLabel.frame.size.width + LABEL_GAP:0;
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(posX, posY, LABEL_WIDTH, LABEL_HEIGHT)];
+    
+    label.text = strValue;
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = backColor;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.layer.cornerRadius = 5;//LABEL_HEIGHT / 2;
+//    [label sizeToFit];
+    
+    CGRect frame = label.frame;
+    posY = vwframe.origin.y + (vwframe.size.height / 2) - frame.size.height / 2;
+    frame.origin.y = posY;
+    label.frame = frame;
+    
+    [aryCateItems addObject:label];
+    [vwCategories addSubview:label];
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+- (void) removeCategoryItems
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+{
+    UILabel *label;
+    
+    for (label in aryCateItems) {
+        [label removeFromSuperview];
+    }
+    [aryCateItems removeAllObjects];
+}
+
+#pragma mark - UITextFieldDelegate
+
+#define TITLE_MAXLENGTH 32
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+- (BOOL)textField:(UITextField *) textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+{
+    NSUInteger maxLength;
+ 
+    if (textField == txtTitle)
+        maxLength = TITLE_MAXLENGTH;
+    else if (textField == txtPayment)
+        maxLength = 4;
+    else if (textField == txtDescription)
+        maxLength = 1024;
+    
+    if (textField.text.length >= maxLength && range.length == 0)
+        return NO;
+    
+    if (textField == txtPayment)
+    {
+        NSCharacterSet *nonNumberSet = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+        
+        if ([string rangeOfCharacterFromSet:nonNumberSet].location != NSNotFound)
+        {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
 
 #pragma mark - Table view data source
 
@@ -181,6 +226,8 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+//    if (indexPath.row == 3) return 100;
+    
     return 64;
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -228,25 +275,6 @@
 }
 */
 
-#pragma mark - UIActionSheetDelegate
-//
-////-------------------------------------------------------------------------------------------------------------------------------------------------
-//- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-////-------------------------------------------------------------------------------------------------------------------------------------------------
-//{
-//    if (buttonIndex != actionSheet.cancelButtonIndex)
-//    {
-//        [PFUser logOut];
-//        ParsePushUserResign();
-//        PostNotification(NOTIFICATION_USER_LOGGED_OUT);
-//
-//        imageUser.image = [UIImage imageNamed:@"blank_profile"];
-//        fieldName.text = @"";
-//
-//        LoginUser(self);
-//    }
-//}
-//
 
 #pragma mark - CategoryDelegate
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -254,24 +282,31 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
     categories = cates;
-    
+ 
+    [self removeCategoryItems];
     if (!categories) return;
-    
     
     if ([categories count] <= 0)
     {
-        txtCategories.text = @"All Categories";
+        [self addCategoryItem:@"All" color:[UIColor redColor]];
     }
     else
     {
-        txtCategories.text = @"";
+        NSString *strKey, *strCaption;
+
+//        txtCategories.text = @"";
         for (NSObject *obj in categories) {
-            NSString *strCaption = (NSString*)obj;
+            strKey  = (NSString*)obj;
+            strCaption = [categories objectForKey:strKey];
             
+#if 0
             if ([txtCategories.text length] > 0)
                 txtCategories.text= [NSString stringWithFormat:@"%@, %@", txtCategories.text, strCaption];
             else
                 txtCategories.text = strCaption;
+#else
+            [self addCategoryItem:strCaption color:[UIColor blueColor]];
+#endif
         }
     }
     
@@ -279,7 +314,9 @@
 }
 
 #pragma mark - SelectorViewDelegate
+//-------------------------------------------------------------------------------------------------------------------------------------------------
 - (void) okSelector : (long)index value: (NSString*)value
+//-------------------------------------------------------------------------------------------------------------------------------------------------
 {
     txtExpiraton.text = value;
 }
@@ -287,7 +324,11 @@
 #pragma mark - User actions
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-- (IBAction)pressExpiration:(id)sender {
+- (IBAction)pressExpiration:(id)sender
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+{
+    [datePicker setMinimumDate:postDate];
+    
     [actionSheet setPickerValue:(UIPickerView<CustomPickerView>*)datePicker value:txtExpiraton.text];
     [actionSheet showActionSheet];
 }
@@ -305,14 +346,42 @@
 - (IBAction)onCancel:(id)sender
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+    self.tabBarController.selectedIndex = 0;
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (IBAction)onPost:(id)sender
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+    if (stringNilOrEmpty(txtTitle.text))
+    {
+        [txtTitle becomeFirstResponder];
+        [ProgressHUD showError:@"Title is empty."];
+        return;
+    }
+    if (!categories)
+    {
+//        [txtPayment becomeFirstResponder];
+        [self onCategory:nil];
+        [ProgressHUD showError:@"Category is not selected."];
+        return;
+    }
+    if (stringNilOrEmpty(txtPayment.text))
+    {
+        [txtPayment becomeFirstResponder];
+        [ProgressHUD showError:@"Payment is empty."];
+        return;
+    }
+    if (stringNilOrEmpty(txtDescription.text))
+    {
+        [txtDescription becomeFirstResponder];
+        [ProgressHUD showError:@"Description is empty."];
+        return;
+    }
+    
     [ProgressHUD show:nil];
     PFObject *object = [PFObject objectWithClassName:PF_CHATROOMS_CLASS_NAME];
+    
     object[PF_CHATROOMS_NAME] = txtTitle.text;
     object[PF_CHATROOMS_DESCRIPTION] = txtDescription.text;
 //    object[PF_POSTS_PAYMENTKEY] = txtPayment.text;
@@ -321,12 +390,13 @@
      {
          if (error == nil)
          {
-//          goto collaction view
+
          }
          else
              [ProgressHUD showError:@"Network error."];
+         
+         self.tabBarController.selectedIndex = 0;
          [ProgressHUD dismiss];
      }];
-
 }
 @end

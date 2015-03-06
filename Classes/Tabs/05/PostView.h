@@ -11,7 +11,7 @@
 
 #import "CustomPickerDefine.h"
 
-@interface PostView : UITableViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, CategoryDelegate, SelectorViewDelegate>
+@interface PostView : UITableViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate,  UITextFieldDelegate, CategoryDelegate, SelectorViewDelegate>
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 
 @end
