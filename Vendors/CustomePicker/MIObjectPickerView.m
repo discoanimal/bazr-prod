@@ -37,7 +37,7 @@
 
 - (NSString*) getValue
 {
-    int idx = [self selectedRowInComponent:0];
+    NSInteger idx = [self selectedRowInComponent:0];
     if (!mValues || [mValues count] <= 0 || idx < 0 || idx >= [mValues count])
         return nil;
     

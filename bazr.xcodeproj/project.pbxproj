@@ -20,11 +20,8 @@
 		075B2E501AA7438A00789776 /* title_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 075B2E481AA7438A00789776 /* title_bar.png */; };
 		075B2E511AA7438A00789776 /* UIViewViewController+ActionSheetSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 075B2E4A1AA7438A00789776 /* UIViewViewController+ActionSheetSimulation.m */; };
 		075B2E551AA7479000789776 /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 075B2E541AA7479000789776 /* NSDate+String.m */; };
-		0761B9A41AA637410064B594 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0761B99F1AA637410064B594 /* MFSideMenuContainerViewController.m */; };
-		0761B9A51AA637410064B594 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0761B9A11AA637410064B594 /* MFSideMenuShadow.m */; };
-		0761B9A61AA637410064B594 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0761B9A31AA637410064B594 /* UIViewController+MFSideMenuAdditions.m */; };
 		0761B9A81AA638350064B594 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0761B9A71AA638350064B594 /* QuartzCore.framework */; };
-		07BC58121AA71E1B005FB7FF /* MFSideMenuContainerViewConroller+TabViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC58111AA71E1B005FB7FF /* MFSideMenuContainerViewConroller+TabViewDelegate.m */; };
+		07A4A0A71AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A4A0A61AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.m */; };
 		292719D719F284AC009C308B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2927193319F284AC009C308B /* AFHTTPRequestOperation.m */; };
 		292719D819F284AC009C308B /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2927193519F284AC009C308B /* AFHTTPRequestOperationManager.m */; };
 		292719D919F284AC009C308B /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2927193719F284AC009C308B /* AFHTTPSessionManager.m */; };
@@ -195,16 +192,9 @@
 		075B2E4A1AA7438A00789776 /* UIViewViewController+ActionSheetSimulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewViewController+ActionSheetSimulation.m"; sourceTree = "<group>"; };
 		075B2E531AA7479000789776 /* NSDate+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+String.h"; sourceTree = "<group>"; };
 		075B2E541AA7479000789776 /* NSDate+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+String.m"; sourceTree = "<group>"; };
-		0761B99D1AA637410064B594 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
-		0761B99E1AA637410064B594 /* MFSideMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuContainerViewController.h; sourceTree = "<group>"; };
-		0761B99F1AA637410064B594 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
-		0761B9A01AA637410064B594 /* MFSideMenuShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuShadow.h; sourceTree = "<group>"; };
-		0761B9A11AA637410064B594 /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
-		0761B9A21AA637410064B594 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
-		0761B9A31AA637410064B594 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
 		0761B9A71AA638350064B594 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		07BC58101AA71E1B005FB7FF /* MFSideMenuContainerViewConroller+TabViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFSideMenuContainerViewConroller+TabViewDelegate.h"; sourceTree = "<group>"; };
-		07BC58111AA71E1B005FB7FF /* MFSideMenuContainerViewConroller+TabViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MFSideMenuContainerViewConroller+TabViewDelegate.m"; sourceTree = "<group>"; };
+		07A4A0A51AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MFSideMenuContainerViewConroller+TabViewDelegate.h"; path = "MFSideMenu/MFSideMenuContainerViewConroller+TabViewDelegate.h"; sourceTree = "<group>"; };
+		07A4A0A61AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MFSideMenuContainerViewConroller+TabViewDelegate.m"; path = "MFSideMenu/MFSideMenuContainerViewConroller+TabViewDelegate.m"; sourceTree = "<group>"; };
 		2927193219F284AC009C308B /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		2927193319F284AC009C308B /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		2927193419F284AC009C308B /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -527,27 +517,12 @@
 			path = NSDate;
 			sourceTree = "<group>";
 		};
-		0761B99C1AA637410064B594 /* MFSideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				0761B99D1AA637410064B594 /* MFSideMenu.h */,
-				0761B99E1AA637410064B594 /* MFSideMenuContainerViewController.h */,
-				0761B99F1AA637410064B594 /* MFSideMenuContainerViewController.m */,
-				0761B9A01AA637410064B594 /* MFSideMenuShadow.h */,
-				0761B9A11AA637410064B594 /* MFSideMenuShadow.m */,
-				0761B9A21AA637410064B594 /* UIViewController+MFSideMenuAdditions.h */,
-				0761B9A31AA637410064B594 /* UIViewController+MFSideMenuAdditions.m */,
-				07BC58101AA71E1B005FB7FF /* MFSideMenuContainerViewConroller+TabViewDelegate.h */,
-				07BC58111AA71E1B005FB7FF /* MFSideMenuContainerViewConroller+TabViewDelegate.m */,
-			);
-			path = MFSideMenu;
-			sourceTree = "<group>";
-		};
 		2927192F19F284AC009C308B /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				07A4A0A51AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.h */,
+				07A4A0A61AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.m */,
 				075B2E3C1AA7438A00789776 /* CustomePicker */,
-				0761B99C1AA637410064B594 /* MFSideMenu */,
 				2927193019F284AC009C308B /* AFNetworking */,
 				296DD54C1A1F52F400AB9F8C /* JSQMessagesViewController */,
 				292719CF19F284AC009C308B /* JSQSystemSoundPlayer */,
@@ -1280,7 +1255,6 @@
 				29271A5B19F284B1009C308B /* GroupView.m in Sources */,
 				292719E219F284AC009C308B /* UIAlertView+AFNetworking.m in Sources */,
 				296DD5CE1A1F52F400AB9F8C /* JSQMessage.m in Sources */,
-				0761B9A51AA637410064B594 /* MFSideMenuShadow.m in Sources */,
 				A05043381A42D8FB00AEC3F7 /* FAKIcon.m in Sources */,
 				296DD5BD1A1F52F400AB9F8C /* UIColor+JSQMessages.m in Sources */,
 				296DD5E21A1F52F400AB9F8C /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
@@ -1322,7 +1296,6 @@
 				A08904491A43B43F00C5A88D /* CSStickyHeaderFlowLayoutAttributes.m in Sources */,
 				296DD5D01A1F52F400AB9F8C /* JSQMessagesBubbleImage.m in Sources */,
 				29271A6B19F284B1009C308B /* utilities.m in Sources */,
-				0761B9A61AA637410064B594 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				29271A6019F284B1009C308B /* MessagesView.m in Sources */,
 				296DD5DB1A1F52F400AB9F8C /* JSQMessagesInputToolbar.m in Sources */,
 				292719DA19F284AC009C308B /* AFNetworkReachabilityManager.m in Sources */,
@@ -1336,7 +1309,6 @@
 				296DD5CA1A1F52F400AB9F8C /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
 				075B2E511AA7438A00789776 /* UIViewViewController+ActionSheetSimulation.m in Sources */,
 				296DD5D31A1F52F400AB9F8C /* JSQMessagesCellTextView.m in Sources */,
-				0761B9A41AA637410064B594 /* MFSideMenuContainerViewController.m in Sources */,
 				296DD5D61A1F52F400AB9F8C /* JSQMessagesCollectionViewCellIncoming.m in Sources */,
 				296DD5DC1A1F52F400AB9F8C /* JSQMessagesLabel.m in Sources */,
 				296DD5C11A1F52F400AB9F8C /* JSQMessagesKeyboardController.m in Sources */,
@@ -1345,8 +1317,8 @@
 				296DD5DD1A1F52F400AB9F8C /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
 				296DD5D11A1F52F400AB9F8C /* JSQPhotoMediaItem.m in Sources */,
 				29271A6219F284B1009C308B /* ProfileView.m in Sources */,
-				07BC58121AA71E1B005FB7FF /* MFSideMenuContainerViewConroller+TabViewDelegate.m in Sources */,
 				A050433A1A42D8FB00AEC3F7 /* FAKZocial.m in Sources */,
+				07A4A0A71AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.m in Sources */,
 				073EF6AF1AA5C86D009CD6A5 /* PostView.m in Sources */,
 				29EB240B19E9292500D7AA97 /* main.m in Sources */,
 				29271A5E19F284B1009C308B /* MessagesCell.m in Sources */,

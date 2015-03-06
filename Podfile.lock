@@ -1,10 +1,13 @@
 PODS:
   - DateTools (1.5.0)
+  - MFSideMenu (0.5.5)
 
 DEPENDENCIES:
   - DateTools
+  - MFSideMenu
 
 SPEC CHECKSUMS:
   DateTools: 7df78f0c4719eb28cfd2d58a90fafd036e73156c
+  MFSideMenu: 0493b0f57385dd036cc5443407a31fda6dee81ac
 
 COCOAPODS: 0.35.0
