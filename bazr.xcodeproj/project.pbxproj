@@ -21,7 +21,10 @@
 		075B2E511AA7438A00789776 /* UIViewViewController+ActionSheetSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 075B2E4A1AA7438A00789776 /* UIViewViewController+ActionSheetSimulation.m */; };
 		075B2E551AA7479000789776 /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 075B2E541AA7479000789776 /* NSDate+String.m */; };
 		0761B9A81AA638350064B594 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0761B9A71AA638350064B594 /* QuartzCore.framework */; };
-		07A4A0A71AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A4A0A61AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.m */; };
+		07A5FDD91AAA02C900967390 /* MFSideMenuContainerViewConroller+TabViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5FDD21AAA02C900967390 /* MFSideMenuContainerViewConroller+TabViewDelegate.m */; };
+		07A5FDDA1AAA02C900967390 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5FDD41AAA02C900967390 /* MFSideMenuContainerViewController.m */; };
+		07A5FDDB1AAA02C900967390 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5FDD61AAA02C900967390 /* MFSideMenuShadow.m */; };
+		07A5FDDC1AAA02C900967390 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5FDD81AAA02C900967390 /* UIViewController+MFSideMenuAdditions.m */; };
 		292719D719F284AC009C308B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2927193319F284AC009C308B /* AFHTTPRequestOperation.m */; };
 		292719D819F284AC009C308B /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2927193519F284AC009C308B /* AFHTTPRequestOperationManager.m */; };
 		292719D919F284AC009C308B /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2927193719F284AC009C308B /* AFHTTPSessionManager.m */; };
@@ -193,8 +196,15 @@
 		075B2E531AA7479000789776 /* NSDate+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+String.h"; sourceTree = "<group>"; };
 		075B2E541AA7479000789776 /* NSDate+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+String.m"; sourceTree = "<group>"; };
 		0761B9A71AA638350064B594 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		07A4A0A51AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MFSideMenuContainerViewConroller+TabViewDelegate.h"; path = "MFSideMenu/MFSideMenuContainerViewConroller+TabViewDelegate.h"; sourceTree = "<group>"; };
-		07A4A0A61AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MFSideMenuContainerViewConroller+TabViewDelegate.m"; path = "MFSideMenu/MFSideMenuContainerViewConroller+TabViewDelegate.m"; sourceTree = "<group>"; };
+		07A5FDD01AAA02C900967390 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		07A5FDD11AAA02C900967390 /* MFSideMenuContainerViewConroller+TabViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFSideMenuContainerViewConroller+TabViewDelegate.h"; sourceTree = "<group>"; };
+		07A5FDD21AAA02C900967390 /* MFSideMenuContainerViewConroller+TabViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MFSideMenuContainerViewConroller+TabViewDelegate.m"; sourceTree = "<group>"; };
+		07A5FDD31AAA02C900967390 /* MFSideMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuContainerViewController.h; sourceTree = "<group>"; };
+		07A5FDD41AAA02C900967390 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
+		07A5FDD51AAA02C900967390 /* MFSideMenuShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuShadow.h; sourceTree = "<group>"; };
+		07A5FDD61AAA02C900967390 /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
+		07A5FDD71AAA02C900967390 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
+		07A5FDD81AAA02C900967390 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
 		2927193219F284AC009C308B /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		2927193319F284AC009C308B /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		2927193419F284AC009C308B /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -517,11 +527,26 @@
 			path = NSDate;
 			sourceTree = "<group>";
 		};
+		07A5FDCF1AAA02C900967390 /* MFSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				07A5FDD01AAA02C900967390 /* MFSideMenu.h */,
+				07A5FDD11AAA02C900967390 /* MFSideMenuContainerViewConroller+TabViewDelegate.h */,
+				07A5FDD21AAA02C900967390 /* MFSideMenuContainerViewConroller+TabViewDelegate.m */,
+				07A5FDD31AAA02C900967390 /* MFSideMenuContainerViewController.h */,
+				07A5FDD41AAA02C900967390 /* MFSideMenuContainerViewController.m */,
+				07A5FDD51AAA02C900967390 /* MFSideMenuShadow.h */,
+				07A5FDD61AAA02C900967390 /* MFSideMenuShadow.m */,
+				07A5FDD71AAA02C900967390 /* UIViewController+MFSideMenuAdditions.h */,
+				07A5FDD81AAA02C900967390 /* UIViewController+MFSideMenuAdditions.m */,
+			);
+			path = MFSideMenu;
+			sourceTree = "<group>";
+		};
 		2927192F19F284AC009C308B /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				07A4A0A51AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.h */,
-				07A4A0A61AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.m */,
+				07A5FDCF1AAA02C900967390 /* MFSideMenu */,
 				075B2E3C1AA7438A00789776 /* CustomePicker */,
 				2927193019F284AC009C308B /* AFNetworking */,
 				296DD54C1A1F52F400AB9F8C /* JSQMessagesViewController */,
@@ -1260,6 +1285,7 @@
 				296DD5E21A1F52F400AB9F8C /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
 				296DD5BE1A1F52F400AB9F8C /* UIDevice+JSQMessages.m in Sources */,
 				296DD5C51A1F52F400AB9F8C /* JSQMessagesBubbleImageFactory.m in Sources */,
+				07A5FDDB1AAA02C900967390 /* MFSideMenuShadow.m in Sources */,
 				292719DB19F284AC009C308B /* AFSecurityPolicy.m in Sources */,
 				292719D719F284AC009C308B /* AFHTTPRequestOperation.m in Sources */,
 				292719DF19F284AC009C308B /* AFURLSessionManager.m in Sources */,
@@ -1318,9 +1344,11 @@
 				296DD5D11A1F52F400AB9F8C /* JSQPhotoMediaItem.m in Sources */,
 				29271A6219F284B1009C308B /* ProfileView.m in Sources */,
 				A050433A1A42D8FB00AEC3F7 /* FAKZocial.m in Sources */,
-				07A4A0A71AA9D20D00EF3881 /* MFSideMenuContainerViewConroller+TabViewDelegate.m in Sources */,
+				07A5FDD91AAA02C900967390 /* MFSideMenuContainerViewConroller+TabViewDelegate.m in Sources */,
 				073EF6AF1AA5C86D009CD6A5 /* PostView.m in Sources */,
+				07A5FDDC1AAA02C900967390 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				29EB240B19E9292500D7AA97 /* main.m in Sources */,
+				07A5FDDA1AAA02C900967390 /* MFSideMenuContainerViewController.m in Sources */,
 				29271A5E19F284B1009C308B /* MessagesCell.m in Sources */,
 				296DD5C41A1F52F400AB9F8C /* JSQMessagesAvatarImageFactory.m in Sources */,
 				292719E119F284AC009C308B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -1447,7 +1475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: HUIQUAN XU (79LBYWB5X4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -1460,6 +1488,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = bazr;
+				PROVISIONING_PROFILE = "9b132a5f-d169-4bdd-b736-8d60f46ddb94";
 				SWIFT_OBJC_BRIDGING_HEADER = "Classes/Tabs/bazr-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1472,7 +1501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: HUIQUAN XU (79LBYWB5X4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -1485,6 +1514,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = bazr;
+				PROVISIONING_PROFILE = "9b132a5f-d169-4bdd-b736-8d60f46ddb94";
 				SWIFT_OBJC_BRIDGING_HEADER = "Classes/Tabs/bazr-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

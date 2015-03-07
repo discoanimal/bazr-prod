@@ -207,15 +207,15 @@
     if (textField.text.length >= maxLength && range.length == 0)
         return NO;
     
-    if (textField == txtPayment)
-    {
-        NSCharacterSet *nonNumberSet = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
-        
-        if ([string rangeOfCharacterFromSet:nonNumberSet].location != NSNotFound)
-        {
-            return NO;
-        }
-    }
+//    if (textField == txtPayment)
+//    {
+//        NSCharacterSet *nonNumberSet = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+//        
+//        if ([string rangeOfCharacterFromSet:nonNumberSet].location != NSNotFound)
+//        {
+//            return NO;
+//        }
+//    }
     
     return YES;
 }
